@@ -1,0 +1,82 @@
+<title>ES6-Part-2-Assignment - JavaScript</title>
+
+<body>
+    <h2 id="title">Polymorphism Class: Favorite Game</h2>
+
+    <script type="text/javascript">
+        class videoGame {
+            constructor (name) {
+                this.name = name;
+            }
+
+            playGame () {
+                console.log("I am playing a favorite video game!");
+            }
+        }
+
+        class fighting extends videoGame {
+            constructor (name) {
+                super(name);
+            }
+
+            playGame () {
+                console.log("I am playing Tekken!");
+            }
+        }
+
+        class rpg extends videoGame {
+            constructor (name) {
+                super(name);
+            }
+
+            playGame () {
+                console.log("I am playing Elden Ring!");
+            }
+        }
+
+        class turnBasedStrategy extends videoGame {
+            constructor (name) {
+                super(name);
+            }
+
+            playGame () {
+                console.log("I am playing Total War: Three Kingdoms!");
+            }
+        }
+
+        class action extends videoGame {
+            constructor (name) {
+                super(name);
+            }
+
+            playGame () {
+                console.log("I am playing Sekiro!");
+            }
+        }
+
+        class survival extends videoGame {
+            constructor (name) {
+                super(name);
+            }
+
+            playGame () {
+                console.log("I am playing Dying Light!");
+            }
+        }
+
+        const a1 = new videoGame("Emily");
+        const a2 = new fighting("Ling Xiaoyu");
+        const a3 = new rpg("Tarnished");
+        const a4 = new turnBasedStrategy("Sun Jian");
+        const a5 = new action("Sekiro");
+        const a6 = new survival("Kyle Crane");
+
+        a1.playGame();
+        a2.playGame();
+        a3.playGame();
+        a4.playGame();
+        a5.playGame();
+        a6.playGame();
+
+    </script>
+</body>
