@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Class Assignment Dec-14</title>
+</head>
+<body>
+    <script>
+
+        class menuItem {
+            constructor(item, price) {
+                this.item = item;
+                this.price = price;
+
+            }
+
+            question () {
+                console.log("What would you like to order?"); 
+
+            }
+        }
+
+
+        class Appetizer extends menuItem {
+            constructor(item, price, isSpicy) {
+            super(item, price);
+            this.isSpicy = isSpicy;
+        } 
+
+            selectAppetizer () {
+                if (this.isSpicy == true) {
+                    console.log("You have ordered spicy " + this.item + "! That will cost " + this.price);
+                } else if (this.isSpicy == false) {
+                    console.log("You have ordered non-spicy " + this.item + "! That will cost " + this.price);
+                }
+            }
+        }
+
+        class mainDish extends menuItem {
+            constructor(item, price, size) {
+                super(item, price);
+                this.size = size;
+            }
+
+            selectMainDish () {
+                console.log("You have ordered a " + this.size + " " + this.item + "! That will cost " + this.price);
+            }
+        }
+
+        class dessert extends menuItem {
+            constructor(item, price, quantity) {
+                super(item, price, quantity);
+                this.quantity = quantity;
+            }
+
+            selectDessert () {
+                console.log("You have ordered " + this.quantity + " " + this.item + "! That will cost " + this.price);
+            }
+        }
+
+        let menuItem1 = new menuItem('Sushi', 15);
+        console.log(menuItem1);
+    
+        let question1 = new menuItem();
+        console.log(question1.question());
+
+        let appetizer1 = new Appetizer('spring rolls', 4, false);
+        console.log(appetizer1.selectAppetizer());
+
+        let appetizer2 = new Appetizer('fried oysters', 7, false);
+        console.log(appetizer2.selectAppetizer());
+
+        let appetizer3 = new Appetizer('salsa and chips', 2, true);
+        console.log(appetizer3.selectAppetizer());
+
+        let mainDish1 = new mainDish('beef stew pho', 3, "big");
+        console.log(mainDish1.selectMainDish());
+
+        let dessert1 = new dessert('scoop(s) of ice cream', 2.5, 2);
+        console.log(dessert1.selectDessert());
+    </script>
+</body>
+</html>
